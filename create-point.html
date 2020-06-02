@@ -15,7 +15,7 @@
     <div id="page-create-point">
         <header>
             <img src="/assets/logo.svg" alt="Logomarca">
-            <a href="#">
+            <a href="./index.html">
                 <span></span>
                 Voltar para home
             </a>
@@ -46,6 +46,8 @@
                         <select name="uf">
                             <option value="">Selecione o Estado</option>
                         </select>
+
+                        <input type="hidden" name="state">
                     </div>
                     <div class="field">
                         <label for="city">Cidade</label>
@@ -63,6 +65,7 @@
             <button type="submit">Cadastrar ponto de coleta</button>
         </form>
     </div>
+    <script src="./scripts/create-point.js"></script>
 </body>
 
 </html>
