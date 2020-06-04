@@ -32,7 +32,7 @@
   }
   
 main {
-    margin-top: 48px;
+    margin: 48px;
 }
 
 main h4 {
@@ -54,6 +54,7 @@ main img {
     height: 150px;
 
     border-radius: 8px 8px 0 0;
+    object-fit: cover;
 }
 
 main .card h1 {
