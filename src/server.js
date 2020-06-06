@@ -4,17 +4,24 @@ const server = express();
 // Configurar pasta publica
 server.use(express.static('public'));
 
+// Utilizando template engine
+const nunjucks = require('nunjucks');
+nunjucks.configure('src/views', {
+  express: server,
+  noCache: true,
+});
+
 // Configurar caminhos da minha aplicação
 // Página inicial
 // req = Requisição = pedido
 // res = Resposta
 server.get('/', (req, res) => {
-  res.sendFile(__dirname + '/views/index.html');
+  return res.render('index.html', { title: 'O meu titulo dinamico' });
 });
 
 // Pagina Create-point
 server.get('/create-point', (req, res) => {
-  res.sendFile(__dirname + '/views/create-point.html');
+  return res.render('create-point.html');
 });
 
 // Ligar o servidor
