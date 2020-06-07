@@ -3,11 +3,11 @@
 {% set pageId = "page-search-results" %}
 
 {% block title %}
-    <title>Resultado da pesquisa</title>
+<title>Resultado da pesquisa</title>
 {% endblock title %}
 
 {% block styles %}
-    <link rel="stylesheet" href="./styles/search-results.css">
+<link rel="stylesheet" href="./styles/search-results.css">
 {% endblock styles %}
 
 {% block content %}
@@ -16,6 +16,7 @@
     <h4>
         <strong>{{ total }} pontos</strong> encontrados
     </h4>
+    {% if total > 0 %}
     <div class="cards">
         {% for place in places %}
         <div class="card">
@@ -29,7 +30,11 @@
             </p>
         </div>
         {% endfor %}
-
     </div>
+    {% else %}
+
+        <h4><strong>Nenhum</strong> local encontrado</h4>
+
+    {% endif %}
 </main>
 {% endblock content %}

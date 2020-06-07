@@ -19,7 +19,7 @@ module.exports = db
 //         address2 TEXT,
 //         state TEXT,
 //         city TEXT,
-//         items TEXT 
+//         items TEXT
 //     )
 //   `);
 //   // 2 - Inserir dados na tabela
@@ -61,12 +61,12 @@ module.exports = db
 // //     console.log(rows);
 // //   });
 
-//   // 4 - Deletar um dado da tabela
-// //   db.run(`DELETE FROM places WHERE id = ?`, [1], function(err){
-// //       if(err){
-// //           return console.log(err)
-// //       }
+//   4 - Deletar um dado da tabela
+  db.run(`DELETE FROM places WHERE id = ?`, [4], function(err){
+      if(err){
+          return console.log(err)
+      }
 
-// //       console.log("Registro deletado com sucesso!")
-// //   })
+      console.log("Registro deletado com sucesso!")
+  })
 // });
